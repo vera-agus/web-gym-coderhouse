@@ -1,220 +1,64 @@
+
 /* ====== Estilos generales ====== */
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background-color: #f5f5f5;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* al menos el alto de la ventana */
-}
+  background-color: #2c2c2c;
+  background-image: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+  background-repeat: repeat;
+  background-size: auto;
+  color: white; /* para que el texto se vea bien */
+} 
 
-header {
-  background-color: #222;
-  padding: 10px 0;
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/*Use la clase .hero para secciones destacadas*/
-.hero {
-  text-align: center;
-  padding: 40px 20px;
-  background-color: #fff;
-}
-
-.hero h1 {
-  font-size: 2.5em;
-  color: #333;
-}
-
-.hero p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-.hero button {
-  background-color: #e63946;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  margin-bottom: 30px;  /* separa el botón de la imagen */
-}
-
-.hero button:hover {
-  background-color: #d62828;
-}
-
-.hero img {
-  margin-top: 20px;
-  max-width: 100%;
-  height: auto;
-}
-
-/* Las siguientes dos clases main y html son para que el footer quede bien abajo de la 
-pagina, porque sino se ubica al final del contenido y capaz el contenido no ocupa toda 
-la pagina entonces nos queda un espacio en blanco debajo del footer.*/
-
-/* El main debe crecer para ocupar el espacio disponible */
 main {
   flex: 1;
 }
 
-html {
+/* Estructura base para que el footer quede abajo */
+html, body {
   height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Opcional: estilos para el footer */
-
-footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px; /* opcional, para que no esté pegado al contenido */
+main {
+  flex: 1; /* Ocupa el espacio disponible entre header y footer */
 }
-.boton { /*Lo uso en index.html para que el encalce de "Unirse ahora" tenga  
-  la apariencia de un boton, y para la apariencia del boton "Elegir plan" de
-  membresias.html. */
+
+/* ====== Botón personalizado (usado como extensión de btn-danger) ====== */
+.btn-danger {
   background-color: #e63946;
-  color: white;
-  text-decoration: none;
-  padding: 10px 20px;
-  font-size: 1em;
-  border: none;
-  display: inline-block;
-  cursor: pointer;
-  border-radius: 5px;
-  border-radius: 5px; 
-}
-.boton:hover {/*cuando pasa el mouse por encima el boton cambia de color*/
-  background-color: #d62828;
+  border-color: #e63946;
 }
 
-.titulo-pagina { /* Lo uso para los titulos que no son de la pagina principal (index) */
-  font-size: 2rem;       /* Tamaño un poco menor que en la página principal */
-  text-align: center;    /* Centrar el título */
-  margin: 30px 0 20px;   /* Espaciado arriba y abajo */
-  color: #222;           /* Color más sobrio */
+.btn-danger:hover {
+  background-color: #d62828;
+  border-color: #d62828;
+}
+
+/* ====== Título de páginas secundarias ====== */
+.titulo-pagina {
+  font-size: 2rem;
+  text-align: center;
+  margin: 30px 0 20px;
+  color: #222;
   font-weight: 600;
 }
 
-.clases-container {/*contenedor de clases del gimnasio para que se vean de la forma que quiero*/
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-  gap: 30px; /* espacio entre clases */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
+/* ====== Imagenes dentro de cards (opcional para uniformidad) ====== */
+.card-img-bottom {
+  max-height: 200px;
+  object-fit: cover;
+  width: 100%;
 }
 
-.clase {/*Esta clase va para las clases que brinda el gimansio */
-  text-align: center;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* sombra suave */
-}
-
-
-/* form-contancto le da una vista mas amigable al formulario de datos a completar */
-.form-contacto {
-  max-width: 500px;          /* Limita ancho máximo para que no quede gigante */
-  margin: 20px auto;         /* Centra el formulario horizontalmente y agrega espacio arriba y abajo */
-  padding: 20px;             /* Espacio interno para que no quede tan pegado */
-  background-color: #fff;    /* Fondo blanco para que resalte */
-  border-radius: 8px;        /* Bordes redondeados para mejor estética */
-  box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Sombra suave para dar profundidad */
-  font-family: Arial, sans-serif;
-}
-
-.form-contacto label {
-  display: block;            /* Cada label en línea nueva */
-  margin-bottom: 6px;        /* Espacio debajo del label */
-  font-weight: bold;
-  color: #333;
-}
-
-.form-contacto input,
-.form-contacto textarea {
-  width: 100%;               /* Ocupa todo el ancho del contenedor */
-  padding: 8px;
-  margin-bottom: 15px;       /* Espacio entre campos */
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;    /* Incluye padding dentro del ancho */
-  font-size: 1em;
-}
-
-.form-contacto button {
-  background-color: #e63946;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 1em;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.form-contacto button:hover {
-  background-color: #d62828;
-}
-
-/* ====== Estilos RESPONSIVOS (para celulares) ====== */
+/* ====== Estilos responsivos ====== */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
+  .card-img-bottom {
+    max-height: 150px;
   }
 
-  nav ul li {
-    margin: 10px 0;
-  }
-
-  .hero h1 {
-    font-size: 2em;
-  }
-
-  .hero p {
-    font-size: 1em;
-  }
-
-  .hero button {
-    width: 100%;
-    max-width: 300px;
-  }
-
-  /* 🆕 Diseño responsivo de clases */
-  .clases-container {
-    grid-template-columns: 1fr;
-  }
-
-  .clase img {
-    width: 100%;
-    height: auto;
+  .titulo-pagina {
+    font-size: 1.6rem;
   }
 }
-
