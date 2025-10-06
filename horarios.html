@@ -5,86 +5,88 @@
   <title>Gimnasio PowerFit - Horarios</title>
   <!--La sig linea es para adaptar el tamaño de pantalla dependiendo el dispositivo--> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Linea de Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <!--La sig linea es para que se realicen los cambios de estilo de acuerdo a nuestro
   archivo .css dando su ubicacion-->
   <link rel="stylesheet" href="css/estilos.css">
 </head>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="clases.html">Clases</a></li>
-        <li><a href="horarios.html">Horarios</a></li>
-        <li><a href="membresias.html">Membresías</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <!--Ahora con cambios utilizando Bootstrap-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">PowerFit</a>
 
-  <main>
-    <h1 class="titulo-pagina">Horarios Semanales</h1>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <table class="tabla" border="1">
-      <thead><!-- Etiqueta para Encabezados -->
-        <tr><!--Encabezados de las colmns-->
-          <th>Día</th>
-          <th>Mañana</th>
-          <th>Tarde</th>
-          <th>Noche</th>
-        </tr>
-      </thead>
-      <tbody> <!--Etiqueta de comienzo de filas-->
-        <tr><!--primer fila-->
-          <td>Lunes</td>
-          <td>Yoga</td>
-          <td>Boxeo</td>
-          <td>Funcional</td>
-        </tr>
-        <tr>
-          <td>Martes</td>
-          <td>Spinning</td>
-          <td>Funcional</td>
-          <td>Boxeo</td>
-        </tr>
-        <tr>
-          <td>Miércoles</td>
-          <td>Yoga</td>
-          <td>Spinning</td>
-          <td>Funcional</td>
-        </tr>
-        <tr>
-          <td>Jueves</td>
-          <td>Yoga</td>
-          <td>Boxeo</td>
-          <td>Spinning</td>
-        </tr>
-        <tr>
-          <td>Viernes</td>
-          <td>Spinning</td>
-          <td>Funcional</td>
-          <td>Boxeo</td>
-        </tr>
-        <tr>
-          <td>Sábado</td>
-          <td>Funcional</td>
-          <td>Yoga</td>
-          <td>—</td>
-        </tr>
-        <tr>
-          <td>Domingo</td>
-          <td>—</td>
-          <td>—</td>
-          <td>—</td>
-        </tr><!--cierrre de ultima fila-->
-      </tbody><!--Cierre de filas-->
-    </table>
-  </main>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="clases.html">Clases</a></li>
+          <li class="nav-item"><a class="nav-link" href="horarios.html">Horarios</a></li>
+          <li class="nav-item"><a class="nav-link" href="membresias.html">Membresías</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      
+    </div>
+  </nav>
+</header>
 
-  <footer>
-    <p>&copy; 2025 Gimnasio PowerFit - Todos los derechos reservados.</p>
-  </footer>
+<main>
+  <div class="container my-5">
+    <h1 class="text-center mb-4">Horarios Semanales</h1>
 
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped table-hover text-center align-middle">
+        <thead class="table-danger">
+          <tr>
+            <th>Día</th>
+            <th>Mañana</th>
+            <th>Tarde</th>
+            <th>Noche</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lunes</td><td>Yoga</td><td>Boxeo</td><td>Funcional</td>
+          </tr>
+          <tr>
+            <td>Martes</td><td>Spinning</td><td>Funcional</td><td>Boxeo</td>
+          </tr>
+          <tr>
+            <td>Miércoles</td><td>Yoga</td><td>Spinning</td><td>Funcional</td>
+          </tr>
+          <tr>
+            <td>Jueves</td><td>Yoga</td><td>Boxeo</td><td>Spinning</td>
+          </tr>
+          <tr>
+            <td>Viernes</td><td>Spinning</td><td>Funcional</td><td>Boxeo</td>
+          </tr>
+          <tr>
+            <td>Sábado</td><td>Funcional</td><td>Yoga</td><td>—</td>
+          </tr>
+          <tr>
+            <td>Domingo</td><td>—</td><td>—</td><td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+  <!--footer con Bootstrap-->
+<footer class="bg-dark text-white text-center py-3 mt-auto">
+  <p>&copy; 2025 Gimnasio PowerFit - Todos los derechos reservados.</p>
+</footer>
+<!--script Boostrap, siempre antes del cierre del body-->  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+ 
 </body>
 </html>

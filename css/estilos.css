@@ -138,37 +138,7 @@ footer {
   box-shadow: 0 2px 8px rgba(0,0,0,0.1); /* sombra suave */
 }
 
-/* Estilo general para todas las tablas (membresias y horarios) */
-.tabla {
-  margin: 0 auto; /* centra la tabla */
-  border-collapse: collapse;
-  width: 80%;
-  max-width: 700px;
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  overflow: hidden;
-}
 
-.tabla th, .tabla td {
-  border: 1px solid #ddd;
-  padding: 12px 20px;
-  text-align: center;
-}
-
-.tabla th {
-  background-color: #e63946;
-  color: white;
-  font-weight: bold;
-}
-
-.tabla tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-.tabla tr:hover {
-  background-color: #f1f1f1;
-}
 /* form-contancto le da una vista mas amigable al formulario de datos a completar */
 .form-contacto {
   max-width: 500px;          /* Limita ancho máximo para que no quede gigante */

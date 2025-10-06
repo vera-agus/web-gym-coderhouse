@@ -5,60 +5,95 @@
   <title>Gimnasio PowerFit - Clases</title>
   <!--La sig linea es para adaptar el tamaño de pantalla dependiendo el dispositivo--> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Linea de Bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
   <!--La sig linea es para que se realicen los cambios de estilo de acuerdo a nuestro
   archivo .css dando su ubicacion-->
   <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="clases.html">Clases</a></li>
-        <li><a href="horarios.html">Horarios</a></li>
-        <li><a href="membresias.html">Membresías</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <!--Ahora con cambios utilizando Bootstrap-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
 
-    <section class="titulo-pagina">
-        <h1>Nuestras Clases</h1>
-        <p>Descubre todas las actividades que ofrecemos para mantenerte en forma y saludable.</p>
-    </section>
- 
-  <section class="clases-container"><!--Procedo a agrupar las clases dentro del contenedor para mostrar en 2 column-->
-    <section class="clase">
-      <h2>🧘 Yoga</h2>
-      <p>Mejora tu flexibilidad y relaja tu mente.</p>
-      <img src="img/yoga.jpg" alt="Clase de yoga" width="300">
-    </section>
+      <a class="navbar-brand" href="index.html">PowerFit</a>
 
-    <section class="clase">
-      <h2>🥊 Boxeo</h2>
-      <p>Entrenamiento de fuerza, velocidad y resistencia.</p>
-      <img src="img/boxeo.jpg" alt="Clase de boxeo" width="300">
-    </section>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <section class="clase">
-      <h2>🏋️ Funcional</h2>
-      <p>Ejercicios dinámicos para todo el cuerpo.</p>
-      <img src="img/funcional.jpg" alt="Clase funcional" width="300">
-    </section>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="clases.html">Clases</a></li>
+          <li class="nav-item"><a class="nav-link" href="horarios.html">Horarios</a></li>
+          <li class="nav-item"><a class="nav-link" href="membresias.html">Membresías</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      
+    </div>
+  </nav>
+</header>
 
-    <section class="clase">
-      <h2>🚴 Spinning</h2>
-      <p>Cardio intenso sobre bicicleta fija.</p>
-      <img src="img/spinning.jpg" alt="Clase de spinning" width="300">
-    </section>
+<main class="container my-5">
+  <section class="text-center mb-4">
+    <h1 class="display-5">Nuestras Clases</h1>
+    <p class="lead">Descubre todas las actividades que ofrecemos para mantenerte en forma y saludable.</p>
   </section>
 
-  </main>
+  <div class="row gy-4">
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 text-center shadow">
+        <div class="card-body">
+          <h2 class="card-title">🧘 Yoga</h2>
+          <p class="card-text">Mejora tu flexibilidad y relaja tu mente.</p>
+        </div>
+        <img src="img/yoga.jpg" class="card-img-bottom" alt="Clase de yoga">
+      </div>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Gimnasio PowerFit - Todos los derechos reservados.</p>
-  </footer>
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 text-center shadow">
+        <div class="card-body">
+          <h2 class="card-title">🥊 Boxeo</h2>
+          <p class="card-text">Entrenamiento de fuerza, velocidad y resistencia.</p>
+        </div>
+        <img src="img/boxeo.jpg" class="card-img-bottom" alt="Clase de boxeo">
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 text-center shadow">
+        <div class="card-body">
+          <h2 class="card-title">🏋️ Funcional</h2>
+          <p class="card-text">Ejercicios dinámicos para todo el cuerpo.</p>
+        </div>
+        <img src="img/funcional.jpg" class="card-img-bottom" alt="Clase funcional">
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 text-center shadow">
+        <div class="card-body">
+          <h2 class="card-title">🚴 Spinning</h2>
+          <p class="card-text">Cardio intenso sobre bicicleta fija.</p>
+        </div>
+        <img src="img/spinning.jpg" class="card-img-bottom" alt="Clase de spinning">
+      </div>
+    </div>
+  </div>
+</main>
+   
+  <!--footer con Bootstrap-->
+<footer class="bg-dark text-white text-center py-3 mt-auto">
+  <p>&copy; 2025 Gimnasio PowerFit - Todos los derechos reservados.</p>
+</footer>
+<!--script Boostrap, siempre antes del cierre del body-->  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
