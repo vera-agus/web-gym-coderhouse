@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gimnasio PowerFit - Inicio</title>
+  <!--La sig linea es para adaptar el tamaño de pantalla dependiendo el dispositivo--> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--La sig linea es para que se realicen los cambios de estilo de acuerdo a nuestro
+  archivo .css dando su ubicacion-->
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+<!--Los siguientes comentarios en header solo los puse en index.html-->
+<!--Este cabeza de pagina lo puse en las 5 paginas-->
+  <header>
+    <nav><!--Contiene una lista de enlaces-->
+      <ul><!--Inicio de lista de enlaces-->
+        <li><a href="index.html">Inicio</a></li><!--Items de la lista-->
+        <li><a href="clases.html">Clases</a></li>
+        <li><a href="horarios.html">Horarios</a></li>
+        <li><a href="membresias.html">Membresías</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul><!--Cierre la lista -->
+    </nav><!--Fin de enlaces-->
+  </header>
+
+  <main>
+    <section class="hero"> <!-- La clase .hero la uso para secciones principales-->
+      <h1>Transforma tu cuerpo en PowerFit</h1>
+      <div>
+        <p>Te ayudamos a alcanzar tus objetivos físicos y mentales.</p>
+        <!--El unico boton del inicio es "Unirse ahora" el cual es 
+        un enlace a membresias, donde uno pudiera elegir el plan e inscribirse-->
+         <a href="membresias.html" class="boton">Unirse ahora</a>
+         <!--Es un enlace pero utiliza la clase .boton para verse como un boton.-->
+      </div>
+      <img src="img/gimnasio.jpg" alt="Personas entrenando en el gimnasio" width="600">
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Gimnasio PowerFit - Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
