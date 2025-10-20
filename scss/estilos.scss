@@ -1,0 +1,141 @@
+/*Uso @use en vez de @import porque:
+El código va a ser compatible con futuras versiones.
+Mejor modularidad y control del scope (evitar colisiones).
+Mejor rendimiento en compilación.*/
+
+@use 'variables' as *;
+
+body {
+  background-color: $color-bg; // ✅ Como antes, sin prefijo
+}
+
+// =======================
+// MIXINS
+// =======================
+@mixin transition($time) {
+  transition: all $time ease-in-out;
+}
+
+@mixin shadow {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@mixin card-img-style($height) {
+  max-height: $height;
+  object-fit: cover;
+  width: 100%;
+}
+
+// =======================
+// ESTILOS GENERALES
+// =======================
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-color: $color-bg;
+  background-image: url('https://www.transparenttextures.com/patterns/brushed-alum.png');
+  background-repeat: repeat;
+  background-size: auto;
+  color: $color-texto;
+}
+
+main {
+  flex: 1;
+}
+
+// =======================
+// BOTONES
+// =======================
+.btn-danger {
+  background-color: $color-principal;
+  border-color: $color-principal;
+  @include transition(0.3s);
+
+  &:hover {
+    background-color: $color-principal-hover;
+    border-color: $color-principal-hover;
+  }
+}
+
+// =======================
+// TITULOS
+// =======================
+.titulo-pagina {
+  font-size: $font-titulo-size;
+  text-align: center;
+  margin: 30px 0 20px;
+  color: $color-titulo;
+  font-weight: 600;
+}
+
+// =======================
+// FORMULARIO
+// =======================
+form {
+  .form-label {
+    color: $color-form-label;
+  }
+
+  input,
+  textarea {
+    @include shadow;
+    @include transition(0.2s);
+
+    &:focus {
+      transform: scale(1.02);
+    }
+  }
+}
+
+// =======================
+// CARDS
+// =======================
+.card {
+  @include shadow;
+  @include transition(0.3s);
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .card-img-bottom {
+    @include card-img-style($img-card-height);
+  }
+}
+
+// =======================
+// FOOTER
+// =======================
+%footer-style {
+  background-color: #111;
+  color: $color-texto;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+}
+
+footer {
+  @extend %footer-style;
+}
+
+// =======================
+// MEDIA QUERIES
+// =======================
+@media (max-width: 768px) {
+  .titulo-pagina {
+    font-size: $font-titulo-size-sm;
+  }
+
+  .card {
+    .card-img-bottom {
+      @include card-img-style($img-card-height-sm);
+    }
+  }
+}
