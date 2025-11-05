@@ -54,25 +54,46 @@ main {
 // BOTONES
 // =======================
 .btn-danger {
-  background-color: $color-principal;
-  border-color: $color-principal;
+  background-color: #2c2c2c; // gris oscuro
+  border: 1px solid #444;
+  color: #f0f0f0;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
   @include transition(0.3s);
 
   &:hover {
-    background-color: $color-principal-hover;
-    border-color: $color-principal-hover;
+    background-color: #3a3a3a;
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    background-color: #222;
+    transform: translateY(0);
   }
 }
 
 // =======================
-// TITULOS
+// TITULOS Y SUBT
 // =======================
+
 .titulo-pagina {
-  font-size: $font-titulo-size;
+  font-family: 'Oswald', sans-serif; // Título fuerte y moderno
+  font-size: 3rem; // tamaño grande para resaltar
+  color: #ffffff; // blanco para que contraste con el gris oscuro
   text-align: center;
   margin: 30px 0 20px;
-  color: $color-titulo;
-  font-weight: 600;
+  font-weight: 700; // fuerte y visible
+  letter-spacing: 1px; // un poco de espacio entre letras da un efecto más deportivo
+}
+
+.subtitulo-pagina {
+  font-family: 'Montserrat', sans-serif;  // Fuente limpia y moderna
+  font-size: 1.5rem;                       // Tamaño menor que el título
+  color: #ffffff;                          // Contraste con el fondo gris
+  text-align: center;                      // Centrado (opcional)
+  font-weight: 500;                        // Medio para que no sea tan fuerte como el título
+  margin: 15px 0;
 }
 
 // =======================
@@ -130,12 +151,19 @@ footer {
 // =======================
 @media (max-width: 768px) {
   .titulo-pagina {
-    font-size: $font-titulo-size-sm;
-  }
-
-  .card {
-    .card-img-bottom {
-      @include card-img-style($img-card-height-sm);
-    }
+    font-size: 2rem;
   }
 }
+
+@media (max-width: 768px) {
+  .subtitulo-pagina {
+    font-size: 1.2rem;
+  }
+}
+
+.card {
+  .card-img-bottom {
+    @include card-img-style($img-card-height-sm);
+  }
+}
+
